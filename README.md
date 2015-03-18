@@ -13,6 +13,7 @@ Une version 2 du Geostandard ANT est en cours de pr&eacute;paration. Gracelite v
 <b>GROUPE DE DISCUSSION</b><br>
 <a href="https://groups.google.com/forum/#!forum/geostandard-ant-users"> https://groups.google.com/forum/#!forum/geostandard-ant-users</a>
 <br>
+<h2>Sources</h2>
 <a href="http://www.gaia-gis.it/gaia-sins/"> Site officiel Spatialite (Licence GNU GPL v3). </a><br>
 <a href="http://stahlworks.com/dev/swiss-file-knife.html"> Site officiel SFK (Swiss File Knife) (Licence BSD). </a><br>
 <a href="http://www.7-zip.org/"> Site officiel 7-zip (Licence GNU LGPL). </a><br>
