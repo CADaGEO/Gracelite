@@ -1,0 +1,14 @@
+Gracelite
+
+\doc : documentation
+\qgis : fichiers QGIS
+\send : livraisons
+\shpcsv-in : shapefiles et csv pour import en base. Des rapports d'anomalies correspondant à ces fichiers peuvent être 
+\shpcsv-out : shapefiles et csv exportés de gracelite.sqlite
+\winx86 : optionnel - exécutables pour les versions Windows 32 bits pour remplacer les executables 64 bits qui sont à la racine. 
+
+Les bases de données spatialite d'intégration et de production, les exécutables et les scripts sont stockés à la racine. 
+
+gracelite_integ.sqlite : base d'intégration. Permet de tester l'import de fichiers. Ca peut être une antichambre pour préparer une livraison pour gracelite_prod.sqlite ou pour un autre SGBD (PostGIS par exemple). 
+
+gracelite_prod.sqlite : base de production. C'est le référentiel (local) pour le contextes mono-utilisateur qui n'ont pas besoin de SGBD client/serveur. 
