@@ -1,0 +1,23 @@
+@ECHO OFF
+
+:LAUNCH
+CALL:CONFIG
+REM CALL:VARIABLES
+ECHO DUMP. 
+CALL:DUMP
+PAUSE
+GOTO:EOF
+
+:CONFIG
+CALL config.bat
+GOTO:EOF
+
+:VARIABLES
+SET GLSPLEX=spatialite.exe
+SET GLDBPROD=.\dbinteg\gracelite_prod.sqlite
+SET SHPCSVOUT=.\shpcsv-out\
+GOTO:EOF
+
+:DUMP
+ECHO %GLDBPROD%_dump.sql
+%GLSPLEX% %GLDBPROD% .dump > %GLDBPROD%_dump.sql

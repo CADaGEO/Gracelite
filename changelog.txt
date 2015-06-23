@@ -1,0 +1,17 @@
+GraceLite
+
+### Changelog
+
+v0.02
+- Ajout de ce changelog
+- Remplacement des données exemple par le jeu de données exemple GraceTHD-Demo01 de GraceTHD-MCD. 
+- Renommage user_dbinteg_*.bat
+- user_dbinteg_dump.bat : création. 
+- user_dbinteg_shpcsv-out.bat : 
+	- Adaptation  pour GraceTHD 2 beta1
+	- Code plus propre
+	- suppression des ' et " avec SFK
+
+
+v0.01
+Création d'un premier prototype pour illustrer une proposition d'architecture. 
