@@ -11,11 +11,12 @@ ECHO DBINTEG
 ECHO - Creer une nouvelle base spatialite dbinteg : IC
 ECHO - Importer les donnees de shpcsv-in dans dbinteg (via ogr2ogr) : II
 ECHO - Exporter les donnees de dbinteg dans shpcsv-out : IE
-ECHO - Creer un dump SQL de dbinteg : ID
+ECHO - Creer un dump SQL de dbinteg : IP
 ECHO DBPROD
 ECHO - Creer une nouvelle base spatialite dbprod : PC
 ECHO - Importer les donnees de shpcsv-in dans dbprod (via ogr2ogr) : PI
 ECHO - Exporter les donnees de dbprod dans shpcsv-out : PE
+ECHO - Creer un dump SQL de dbprod : PP
 ECHO GENERAL
 ECHO - AIDE : H
 ECHO - Quitter : Q
