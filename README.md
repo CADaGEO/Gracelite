@@ -6,6 +6,10 @@ Le nom d'usage du projet &agrave; la base du Geostandard ANT est GraceTHD. Histo
 <br>
 Une version 2 du Geostandard ANT est en cours de pr&eacute;paration. Gracelite vise cette version.  
 <br>
+<h2>Utilisation</h2>
+Un lanceur est disponible pour débuter avec Gracelite : user_launch.bat 
+<br>
+
 <h2>Contact</h2>
 <b>GROUPE DE DISCUSSION</b><br>
 <a href="https://groups.google.com/forum/#!forum/geostandard-ant-users"> https://groups.google.com/forum/#!forum/geostandard-ant-users</a>
