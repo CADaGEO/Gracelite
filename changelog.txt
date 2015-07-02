@@ -2,9 +2,22 @@ GraceLite
 
 ### Changelog
 
+v0.03
+- user_launch.bat : 
+	- Colorisation des textes
+	- Aide page par page. 
+	- Ajout d'un commande de configuration (lance config.bat dans notepad)
+- config.bat : 
+	- SET GLNOTEPAD=notepad : ajout
+	
 v0.02
 - Ajout de ce changelog
 - Remplacement des données exemple par le jeu de données exemple GraceTHD-Demo01 de GraceTHD-MCD. 
+- Prise en compte de GraceTHD-MCD v2 beta1b
+- Création de config.bat
+- Passage à ogr2ogr pour les imports. 
+- Création de user_launch.bat pour aider au lancement des batchs
+- Evolutions du fichier de documentation. 
 - Renommage user_dbinteg_*.bat
 - user_dbinteg_dump.bat : création. 
 - user_dbinteg_shpcsv-out.bat : 

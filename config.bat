@@ -19,6 +19,7 @@ SET GLSPLGUI=spatialite_gui.exe
 SET GLSHP_DOCTOR=shp_doctor.exe
 SET GLSFK=sfk174.exe
 SET GL7Z=7z.exe
+SET GLNOTEPAD=notepad
 
 REM ### CONFIG DBINTEG
 SET GLDBINTEG=.\dbinteg\gracelite_integ.sqlite
