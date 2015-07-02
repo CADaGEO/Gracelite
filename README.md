@@ -13,6 +13,10 @@ Un lanceur est disponible pour débuter avec Gracelite : user_launch.bat
 <br>
 
 <h2>Contact</h2>
+<b>CADaGEO</b><br>
+<a href="http://www.cadageo.com/contact/">
+http://www.cadageo.com/contact/</a>
+<br>
 <b>GROUPE DE DISCUSSION</b><br>
 <a href="https://groups.google.com/forum/#!forum/geostandard-ant-users"> https://groups.google.com/forum/#!forum/geostandard-ant-users</a>
 <br>
