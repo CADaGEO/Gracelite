@@ -2,7 +2,7 @@
 Gracelite est un projet de toolbox d&eacute;di&eacute; &agrave; l'exploitation du Geostandard ANT (Am&eacute;nagement Num&eacute;rique des Territoires) avec Spatialite. <br>
 <a href="http://www.territoires-ville.cerema.fr/geostandard-amenagement-numerique-a350.html"> Geostandard ANT. </a>
 <br>
-Le nom d'usage du projet &agrave; la base du Geostandard ANT est GraceTHD. Historiquement Gr@ce est le nom du portail de g&eacute;or&eacute;f&eacute;rencement et de recensement des infrastructures de communications &eacute;lectroniques de la r&eacute;gion Aquitaine. <a href="http://grace.aquitaine.fr/accueil/"> http://grace.aquitaine.fr/accueil/ </a> Le mod&egrave;le de donn&eacute;es de ce portail a massivement servi de mod&egrave;le au Geostandard ANT. <br>
+Le nom d'usage du projet &agrave; la base du Geostandard ANT est GraceTHD. Historiquement Gr@ce est le nom du portail de g&eacute;or&eacute;f&eacute;rencement et de recensement des infrastructures de communications &eacute;lectroniques de la r&eacute;gion Aquitaine. <a href="http://grace.aquitaine.fr/accueil/"> http://grace.aquitaine.fr/accueil/ </a> Le mod&egrave;le de donn&eacute;es de ce portail a massivement servi de mod&egrave;le au Geostandard ANT v1. <br>
 <br>
 Une version 2 du Geostandard ANT est en cours de pr&eacute;paration. Gracelite vise cette version.
 Le modèle de données de données est géré sur ce dépôt : 
