@@ -1,7 +1,7 @@
 @ECHO OFF
 
 REM ### CONFIG BINAIRES - CHEMINS ABSOLUS
-REM GLOSGEOPATH - Chemin du dossier d'installation de QGIS / OSGeo4w (OSGeo4W.bat doit etre present)
+REM GLOSGEOPATH - Chemin du dossier d'installation de QGIS / OSGeo4w (OSGeo4W.bat doit y etre present)
 SET GLOSGEOPATH=C:\Program Files\QGIS Wien
 REM SET GLOSGEOPATH=C:\OSGeo4W
 REM GLQGIS - Chemin vers qgis.bat
