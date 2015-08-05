@@ -11,6 +11,7 @@ SET GLOSGEO4W=%GLOSGEOPATH%\OSGeo4W.bat
 REM GLOGR2OGR - Chemin vers ogr2ogr.exe
 SET GLOGR2OGR=%GLOSGEOPATH%\bin\ogr2ogr.exe
 SET GLOGRINFO=%GLOSGEOPATH%\bin\ogrinfo.exe
+SET GLNOTEPAD=notepad
 
 REM ### CONFIG BINAIRES - CHEMINS RELATIFS
 SET GLSPLEX=spatialite.exe --silent
@@ -19,7 +20,6 @@ SET GLSPLGUI=spatialite_gui.exe
 SET GLSHP_DOCTOR=shp_doctor.exe
 SET GLSFK=sfk174.exe
 SET GL7Z=7z.exe
-SET GLNOTEPAD=notepad
 
 REM ### CONFIG DBINTEG SPATIALITE
 SET GLDBINTEG=.\dbinteg\gracelite_integ.sqlite
@@ -54,12 +54,9 @@ SET PGPASSWORD=MYPASSWORD
 REM VARIABLE POSTGRESQL POUR FIXER L'ENCODAGE DES SORTIES (PGSQL2SHP). NON TESTE. 
 SET pgclientencoding=WIN1252
 REM # CONFIG BATCH
-ECHO Gracepg - Variables batch
-REM shp2pgsql -s 2154 -a -W cp1252 t_adresse gracethd.t_adresse > t_adresse.sql
 SET PGHOSTNAME=localhost
 SET PGPORT=5432
 SET PGDB=gracethd2beta2b
-REM SET PGDB=gracethd2
 SET PGSCHEMA=gracethd
 SET PGUSER=postgres
 REM SET PGSRC=D:\postgres_files\shpcsv-out
