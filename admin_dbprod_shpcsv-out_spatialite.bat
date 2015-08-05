@@ -1,6 +1,6 @@
 @ECHO OFF
 REM Gracelite/user_dbprod_shpcsv-out_spatialite.bat
-REM Version : 0.01
+REM Version : 0.02
 REM ALENO
 REM EXPORT DANS SHPCSV-OUT DES TABLES DE gracelite_prod.sqlite
 REM Licence : GNU GPLv3
@@ -13,15 +13,11 @@ PAUSE
 :LAUNCH
 CALL:CONFIG
 REM CALL:VARIABLES
-ECHO Export des tables spatiales en shapefiles. 
 CALL:EXPORTSHP_T
-ECHO Export des tables en csv. 
 REM PAUSE
 CALL:EXPORTCSV_T
-ECHO Export des listes en csv. 
 REM PAUSE
 CALL:EXPORTCSV_L
-ECHO Suppression des délimiteurs quotes et double quotes 
 REM PAUSE
 CALL:SFK
 REM APPEL UNE SECONDE FOIS CAR BUG, DES " RESTENT EN FIN DE LA LIGNE LA 1ERE FOIS
@@ -30,6 +26,7 @@ PAUSE
 GOTO:EOF
 
 :CONFIG
+ECHO Configuration des variables. 
 CALL config.bat
 GOTO:EOF
 
@@ -43,6 +40,7 @@ SET SHPCSVOUT=.\shpcsv-out\
 GOTO:EOF
 
 :EXPORTSHP_T
+ECHO Export des tables spatiales en shapefiles. 
 SET SHPOUT=t_adresse
 SET SPLTBL=t_adresse
 SET SPLTYPE=POINT
@@ -53,8 +51,8 @@ SET SPLTBL=t_noeud
 SET SPLTYPE=POINT
 spatialite_tool -e -shp %GLSHPOUTPATH%\%SHPOUT% -d %GLDBPROD% -t %SPLTBL% -g geom -c %GLSHPOUTCODE% --type %SPLTYPE%
 
-SET SHPOUT=t_cable
-SET SPLTBL=t_cable
+SET SHPOUT=t_cableline
+SET SPLTBL=t_cableline
 SET SPLTYPE=LINESTRING
 spatialite_tool -e -shp %GLSHPOUTPATH%\%SHPOUT% -d %GLDBPROD% -t %SPLTBL% -g geom -c %GLSHPOUTCODE% --type %SPLTYPE%
 
@@ -97,7 +95,7 @@ GOTO:EOF
 
 
 :EXPORTCSV_T
-
+ECHO Export des tables en csv. 
 SET CSVTBL=t_organisme
 SET CSVOUT=%GLSHPOUTPATH%\%CSVTBL%.csv
 ECHO Suppression %CSVOUT%
@@ -210,6 +208,14 @@ ECHO Export %CSVOUT%
 REM -silent 
 %GLSPLEX% -header -csv -separator ';' %GLDBPROD% "SELECT * FROM %CSVTBL%;" > %CSVOUT%
 
+SET CSVTBL=t_cable
+SET CSVOUT=%GLSHPOUTPATH%\%CSVTBL%.csv
+ECHO Suppression %CSVOUT%
+IF EXIST %CSVOUT% DEL %CSVOUT%
+ECHO Export %CSVOUT%
+REM -silent 
+%GLSPLEX% -header -csv -separator ';' %GLDBPROD% "SELECT * FROM %CSVTBL%;" > %CSVOUT%
+
 SET CSVTBL=t_cab_cond
 SET CSVOUT=%GLSHPOUTPATH%\%CSVTBL%.csv
 ECHO Suppression %CSVOUT%
@@ -288,6 +294,7 @@ REM t_empreinte
 
 
 :EXPORTCSV_L
+ECHO Export des listes en csv. 
 SET CSVTBL=l_adresse_etat
 SET CSVOUT=%GLSHPOUTPATH%\%CSVTBL%.csv
 ECHO Suppression %CSVOUT%
@@ -722,6 +729,7 @@ REM -silent
 GOTO:EOF
 
 :SFK
+ECHO Suppression des délimiteurs quotes et double quotes 
 %GLSFK% replace -text "_;'_;_" -dir %GLSHPOUTPATH%\ -file .csv -yes
 %GLSFK% replace -text "_';_;_" -dir %GLSHPOUTPATH%\ -file .csv -yes
 REM Bug apparemment sur le suivant. A marché lance à la main !?

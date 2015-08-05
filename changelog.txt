@@ -2,6 +2,15 @@ GraceLite
 
 ### Changelog
 
+v0.04
+- Adaptation des scripts à GraceTHD-MCD v2 beta2b. 
+- Intégration de GraceTHD-Demo01
+- Ajout de scripts d'import et d'export PostGIS
+	- gracepg_shpcsv_import_v0.02.bat
+	- gracepg_shpcsv_export_v0.02.bat
+	- Config.bat : Ajout d'une section pour PostGIS
+	- user_launch.bat : pas d'intégration de ces pré-versions. 
+
 v0.03
 - user_launch.bat : 
 	- Colorisation des textes
