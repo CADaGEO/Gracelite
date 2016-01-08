@@ -25,11 +25,11 @@ REM pgsql2shp -f "D:\postgres_files\shpcsv-out\t_adresse" -h localhost -p 5433 -
 SET PGTBL=t_adresse
 SET PGSHP=%PGSHPOUTPATH%\%PGTBL%
 pgsql2shp -f %PGSHP% -h %PGHOSTNAME% -p %PGPORT% -u %PGUSER% -P %PGPASSWORD% %PGDB% %PGSCHEMA%.%PGTBL%
-PAUSE
 
 SET PGTBL=t_organisme
 SET PGCSV=%PGSHPOUTPATH%\%PGTBL%.csv
 PSQL -h %PGHOSTNAME% -p %PGPORT% -c "COPY %PGSCHEMA%.%PGTBL% TO '%PGCSV%' %PGCSVCONF%;" -d %PGDB% %PGUSER%
+PAUSE
 
 SET PGTBL=t_reference
 SET PGCSV=%PGSHPOUTPATH%\%PGTBL%.csv

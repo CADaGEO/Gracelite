@@ -56,7 +56,7 @@ SET pgclientencoding=WIN1252
 REM # CONFIG BATCH
 SET PGHOSTNAME=localhost
 SET PGPORT=5432
-SET PGDB=gracethd2beta2b
+SET PGDB=gracethd20
 SET PGSCHEMA=gracethd
 SET PGUSER=postgres
 REM SET PGSRC=D:\postgres_files\shpcsv-out

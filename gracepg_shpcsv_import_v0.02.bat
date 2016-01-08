@@ -21,6 +21,7 @@ GOTO:EOF
 
 :CONF
 CALL config.bat
+REM CALL config_v2.0.bat
 GOTO:EOF
 
 :OK

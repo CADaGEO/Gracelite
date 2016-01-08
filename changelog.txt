@@ -1,6 +1,11 @@
 GraceLite
 
 ### Changelog
+v0.05
+- Adaptation des scripts à GraceTHD-MCD v2.0 -> RELEASE FINALE. 
+- gracelite_aide.txt : quelques modifications. 
+- Ajout des scripts de création de base GraceTHD sous PostGIS. 
+
 
 v0.04
 - Adaptation des scripts à GraceTHD-MCD v2 beta2b. 

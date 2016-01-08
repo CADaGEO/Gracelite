@@ -304,6 +304,13 @@ ECHO Export %CSVOUT%
 REM -silent 
 %GLSPLEX% -header -csv -separator ';' %GLDBINTEG% "SELECT * FROM %CSVTBL%;" > %CSVOUT%
 
+SET CSVTBL=l_avancement
+SET CSVOUT=%GLSHPOUTPATH%\%CSVTBL%.csv
+ECHO Suppression %CSVOUT%
+IF EXIST %CSVOUT% DEL %CSVOUT%
+ECHO Export %CSVOUT%
+REM -silent 
+%GLSPLEX% -header -csv -separator ';' %GLDBINTEG% "SELECT * FROM %CSVTBL%;" > %CSVOUT%
 
 SET CSVTBL=l_baie_type
 SET CSVOUT=%GLSHPOUTPATH%\%CSVTBL%.csv

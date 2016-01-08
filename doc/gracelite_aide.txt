@@ -4,17 +4,18 @@ GRACELITE - AIDE
 \dbinteg : base de donnees Spatialite d'integration + projet QGIS. Cette base peut etre recree. 
 \dbprod : base de donnees Spatialite de production + projet QGIS. 
 \doc : documentation
-\send : livraisons
+\send : exemple de livraison
 \shpcsv-in : shapefiles et csv pour import en base. Des rapports d'anomalies correspondant a ces fichiers peuvent etre 
 \shpcsv-out : shapefiles et csv exportes de gracelite.sqlite
-\winx86 : optionnel - executables pour les versions Windows 32 bits pour remplacer les executables 64 bits qui sont a la racine. 
+\sql_postgis : scripts sql permettant de créer une base GraceTHD sous PostGIS
+\sql_spatialite : scripts sql permettant de créer une base GraceTHD Spatialite (exploites pour creer gracelite_integ.sqlite et gracelite_prod.sqlite). 
 
 Les executables et les scripts sont stockes a la racine. 
 
 # BASES DE DONNEES
 .\dbinteg\gracelite_integ.sqlite : base d'integration. Permet de tester l'import de fichiers. Peut etre une antichambre pour preparer une livraison pour gracelite_prod.sqlite ou pour un autre SGBD (PostGIS par exemple). 
 
-.\dbprod\gracelite_prod.sqlite : base de production. C'est le referentiel (local) pour un contexte mono-utilisateur qui n'a pas besoin de SGBD client/serveur. Cette base doit etre regulierement sauvegardee et reserver l'utilisation de scripts a l'administrateur. 
+.\dbprod\gracelite_prod.sqlite : base de production. C'est le referentiel (local) pour un contexte mono-utilisateur qui n'a pas besoin de SGBD client/serveur type PostGIS. Si cette base est utilisée comme referentiel, il faut l'administrer (sauvegardes, droits d'accès, limiter l'accès aux scripts pouvant ecraser la base, etc.). 
 
 # SCRIPTS
 user_launch.bat : un lanceur optionnel pour assister l'utilisateur dans le declenchement des scripts qu'il souhaite executer. 
@@ -24,11 +25,11 @@ config.bat : variables utilisees par Gracelite. Il y a principalement une ligne 
 admin_dbprod_create.bat : Creer une nouvelle base spatialite dbprod
 admin_dbprod_dump.bat : Creer un dump SQL de dbprod
 admin_dbprod_shpcsv-in_insert_ogr2ogr.bat : Importer les donnees de shpcsv-in dans dbprodg (via ogr2ogr)
-admin_dbprod_shpcsv-out_spatialite.bat : Exporter les donnees de dbprod dans shpcsv-out
+admin_dbprod_shpcsv-out_spatialite.bat : Exporter les donnees de dbprod dans shpcsv-out. Attention, Spatialite ne gere pas le dimensionnement des attributs donc le dimensionnement des attributs des shapefiles exportes ne sont pas conformes. 
 
 user_dbinteg_create.bat : Creer une nouvelle base spatialite dbinteg
 user_dbinteg_dump.bat : Creer un dump SQL de dbinteg
 user_dbinteg_shpcsv-in_insert_ogr2ogr.bat : Importer les donnees de shpcsv-in dans dbinteg (via ogr2ogr)
-user_dbinteg_shpcsv-in_insert_spatialite.bat : Importer les donnees de shpcsv-in dans dbinteg (via spatialite_tool) - BUG !!
-user_dbinteg_shpcsv-out_spatialite.bat : Exporter les donnees de dbinteg dans shpcsv-out
+user_dbinteg_shpcsv-in_insert_spatialite.bat : Importer les donnees de shpcsv-in dans dbinteg (via spatialite_tool) - BUG ET NON MAINTENU, DIIFFUSE POUR EXEMPLE !!
+user_dbinteg_shpcsv-out_spatialite.bat : Exporter les donnees de dbinteg dans shpcsv-out. Attention, Spatialite ne gere pas le dimensionnement des attributs donc le dimensionnement des attributs des shapefiles exportes ne sont pas conformes. 
 
