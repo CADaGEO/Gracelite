@@ -1,29 +1,30 @@
 @ECHO OFF
 
 REM Gracelite/gracelite_schema
-REM Version : 0.01
+REM Version : 0.02
 REM ALENO
 REM CREATION DU SCHEMA DE gracelite
 REM Licence : GNU GPLv3
 REM 19/06/2015 - SBY - aleno.eu : CREATION DU SCRIPT
+REM 08/01/2016 - SBY - aleno.eu : Adaptation GraceTHD-MCD v2.0
 REM Cible spatialite
 
 ECHO GRACELITE - CREATION DE LA STRUCTURE DE LA BASE DE DONNEES
 ECHO GRACELITE - CREATION DES LISTES
-SET FSQL=%SCHEMA%gracethd_1_lists.sql
+SET FSQL=%SCHEMA%gracethd_10_lists.sql
 %SPLEX% %SPLDB% < %FSQL%
 ECHO GRACELITE - INSERT VALEURS DANS LES LISTES
-SET FSQL=%SCHEMA%gracethd_2_insert.sql
+SET FSQL=%SCHEMA%gracethd_20_insert.sql
 %SPLEX% %SPLDB% < %FSQL%
 ECHO GRACELITE - CREATION DES TABLES
-SET FSQL=%SCHEMA%gracethd_3_tables.sql
+SET FSQL=%SCHEMA%gracethd_30_tables.sql
 %SPLEX% %SPLDB% < %FSQL%
 ECHO GRACELITE - AJOUT DES CHAMPS GEOMETRIQUES
-SET FSQL=%SCHEMA%gracethd_4_spatialite.sql
+SET FSQL=%SCHEMA%gracethd_40_spatialite.sql
 %SPLEX% %SPLDB% < %FSQL%
 ECHO GRACELITE - AJOUT DES INDEX
-SET FSQL=%SCHEMA%gracethd_5_index.sql
+SET FSQL=%SCHEMA%gracethd_50_index.sql
 %SPLEX% %SPLDB% < %FSQL%
 ECHO GRACELITE - AJOUT DES SPECIFICITES
-SET FSQL=%SCHEMA%gracethd_6_specifique.sql
+SET FSQL=%SCHEMA%gracethd_90_labo.sql
 %SPLEX% %SPLDB% < %FSQL%
