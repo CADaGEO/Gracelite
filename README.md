@@ -1,4 +1,7 @@
 # Gracelite
+
+OBSOLETE : voir les scripts de GraceTHD-Check.
+
 Gracelite est un projet de toolbox d&eacute;di&eacute; &agrave; l'exploitation du Geostandard ANT (Am&eacute;nagement Num&eacute;rique des Territoires) GraceTHD : <a href="http://www.geoinformations.developpement-durable.gouv.fr/standard-covadis-amenagement-numerique-des-a3300.html"> Geostandard ANT v2. </a>
 <br>
 Le modèle de données de données GraceTHD-MCD : 
